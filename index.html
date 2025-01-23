@@ -1,12 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus quibusdam, obcaecati aspernatur rerum corporis quasi, laudantium nulla deserunt eos quo quidem qui natus itaque debitis laboriosam repellat. Ad, ipsam repudiandae.</p>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="todo">
+      <h1>TO DO LIST</h1>
+      <div id="mani">
+        <input
+          type="text"
+          id="newinput"
+          placeholder="Enter to do list"
+          aria-label="recipient's usename"
+          aria-describedby="addbtn"
+        />
+        <button onclick="add()" id="addbtn">ADD</button>
+      </div>
+      <div id="text">
+        <table class="table">
+          <thead id="records">
+            <!-- d//This defines the table's header section where column titles are placed. -->
+            <!-- <tr>
+              // Defines a row within the table. -->
+            <!-- <th scope="col">newinput</th>
+              <th scope="col">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-trash"></i>
+              </th>
+            </tr> -->
+          </thead>
+        </table>
+       
+      </div>
+    </div>
+    <script>
+      // const input = document.getElementById("newinput");
+      // const btn = document.getElementById("addbtn");
+      // const btntext = btn.innerText;
+      // const recordsdata = document.getElementById("records");
+      // let task = [];
+      // let edit_id = null;
+      // //  str->obj
+      // let objstr = localStorage.getItem("users");
+      // if (objstr != null) {
+      //   task = JSON.parse(objstr);
+      // }
+      // disply();
+      // btn.onclick = () => {
+      //   const textinput = input.value;
+      //   // task.push({ textinput: textinput });
+      //   if (edit_id != null) {
+      //     //edit
+      //     task.splice(edit_id, 1, {'textinput' :textinput});
+      //     edit_id = null;
+      //   } else {
+         
+      //     task.push({'textinput' :textinput} );
+      //   }
+      //   //  console.log(textinput) 
+
+      //   // console.log(task)
+
+      //   seve(task);
+      //   input.value = "";
+      
+      //   btn.innerText = btntext;
+      // };
+      // function seve(task) {
+      //   //obj->str
+      //   let str = JSON.stringify(task);
+      //   localStorage.setItem("users", str);
+      //   disply();
+      // }
+      // function disply() {
+      //   let statement = "";
+
+      //   task.forEach((user, i) => {
+      //     statement += `<tr>
+      //         <!-- // Defines a row within the table. -->
+      //         <th scope="col">${i + 1}</th>
+      //         <th scope="col">${user.textinput}</th>
+      //         <th scope="col">
+      //           <i class="fa-solid fa-pen-to-square" onclick='edit(${i})'></i>
+      //           <i class="fa-solid fa-trash" onclick='delet(${i})'></i>
+      //         </th>`;
+      //   });
+      //   recordsdata.innerHTML = statement;
+      // }
+
+      // function edit(id) {
+      //   edit_id = id;
+      //   input.value = task[id].textinput;
+      //   btn.innerText = "seve changes";
+      // }
+      // function delet (id) {
+      //   task.splice(id, 1);
+      //   seve(task);
+       
+      // }
+
+      function add() {
+      const input = document.getElementById("newinput");
+        task.push(input);
+        // console.log("manisha", task.value);
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+         
+        // const work=[ "Ram","Radha","Shita"]
+        const task = ['gtdt','gvg'];
+        const manidiv = document.getElementById("mani");
+        for (let i = 0; i < task.length; i++) {
+          let item = document.createElement("h1");
+          item.textContent = task[i];
+          manidiv.appendChild(item);
+      const deletebutton = document.createElement("button");
+       deletebutton.textContent="Delete"
+       const editbtn= document.createElement("button");
+    editbtn.textContent="edit"
+      manidiv.appendChild(deletebutton);
+     manidiv.appendChild(editbtn);
+
+    //
+        }
+      //   
+      //   const h1 = document.createElement("h1");
+      //   h1.innerHTML = task;
+      //   ul.appendChild(h1);
+      //   manidiv.appendChild(ul);
+       });
+      // const addbtn = document.getElementById("addbtn");
+    </script>
+    <!-- <button id="add">ADD</button>
+    <input type="text" placeholder="enter" id="key">
+    <script src="practice.js"></script> -->
+  </body>
 </html>
+
+
