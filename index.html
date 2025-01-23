@@ -1,8 +1,6 @@
 <!DOCTYPE html>
+git rebase --abort
 <html lang="en">
-
-
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,7 +41,6 @@
             </tr> -->
           </thead>
         </table>
-       
       </div>
     </div>
     <script>
@@ -67,16 +64,16 @@
       //     task.splice(edit_id, 1, {'textinput' :textinput});
       //     edit_id = null;
       //   } else {
-         
+
       //     task.push({'textinput' :textinput} );
       //   }
-      //   //  console.log(textinput) 
+      //   //  console.log(textinput)
 
       //   // console.log(task)
 
       //   seve(task);
       //   input.value = "";
-      
+
       //   btn.innerText = btntext;
       // };
       // function seve(task) {
@@ -109,38 +106,37 @@
       // function delet (id) {
       //   task.splice(id, 1);
       //   seve(task);
-       
+
       // }
 
       function add() {
-      const input = document.getElementById("newinput");
+        const input = document.getElementById("newinput");
         task.push(input);
         // console.log("manisha", task.value);
       }
       document.addEventListener("DOMContentLoaded", () => {
-         
         // const work=[ "Ram","Radha","Shita"]
-        const task = ['gtdt','gvg'];
+        const task = ["gtdt", "gvg"];
         const manidiv = document.getElementById("mani");
         for (let i = 0; i < task.length; i++) {
           let item = document.createElement("h1");
           item.textContent = task[i];
           manidiv.appendChild(item);
-      const deletebutton = document.createElement("button");
-       deletebutton.textContent="Delete"
-       const editbtn= document.createElement("button");
-    editbtn.textContent="edit"
-      manidiv.appendChild(deletebutton);
-     manidiv.appendChild(editbtn);
+          const deletebutton = document.createElement("button");
+          deletebutton.textContent = "Delete";
+          const editbtn = document.createElement("button");
+          editbtn.textContent = "edit";
+          manidiv.appendChild(deletebutton);
+          manidiv.appendChild(editbtn);
 
-    //
+          //
         }
-      //   
-      //   const h1 = document.createElement("h1");
-      //   h1.innerHTML = task;
-      //   ul.appendChild(h1);
-      //   manidiv.appendChild(ul);
-       });
+        //
+        //   const h1 = document.createElement("h1");
+        //   h1.innerHTML = task;
+        //   ul.appendChild(h1);
+        //   manidiv.appendChild(ul);
+      });
       // const addbtn = document.getElementById("addbtn");
     </script>
     <!-- <button id="add">ADD</button>
@@ -148,5 +144,3 @@
     <script src="practice.js"></script> -->
   </body>
 </html>
-
-
